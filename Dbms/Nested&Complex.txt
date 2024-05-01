@@ -1,0 +1,10 @@
+-- Nested query
+SELECT *
+FROM Students
+WHERE Age IN (SELECT MAX(Age) FROM Students);
+
+-- Complex query
+SELECT s.Name, a.Title
+FROM Students s
+JOIN Books b ON s.StudentID = b.StudentID
+JOIN Authors a ON b.AuthorID = a.AuthorID;

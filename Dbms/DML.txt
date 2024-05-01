@@ -1,0 +1,14 @@
+-- Insert data
+INSERT INTO Students (Name, Age, GPA)
+VALUES ('Alice', 20, 3.5),
+ ('Bob', 22, 3.2),
+ ('Charlie', 21, 3.8);
+ 
+-- Update data
+UPDATE Students
+SET GPA = 3.9
+WHERE Name = 'Alice';
+
+-- Delete data
+DELETE FROM Students
+WHERE Name = 'Bob';

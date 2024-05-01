@@ -1,0 +1,6 @@
+-- DCL command (grant/revoke)
+GRANT SELECT ON Students TO Bob;
+
+-- TCL command (commit/rollback)
+COMMIT;
+ROLLBACK;

@@ -1,0 +1,10 @@
+-- String functions
+SELECT UPPER(Name) AS 'Name'
+FROM Students;
+
+-- Arithmetic functions
+SELECT AVG(Age) AS 'Average Age'
+FROM Students;
+
+-- Date and time functions
+SELECT NOW() AS 'Current Time';

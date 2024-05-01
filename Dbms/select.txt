@@ -1,0 +1,9 @@
+-- Group by
+SELECT Age, COUNT(*)
+FROM Students
+GROUP BY Age;
+
+-- Order by
+SELECT *
+FROM Students
+ORDER BY GPA DESC;

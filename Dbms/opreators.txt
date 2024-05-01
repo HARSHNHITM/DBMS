@@ -1,0 +1,13 @@
+-- Arithmetic operators
+SELECT (Age + 5) AS 'Age in 5 Years'
+FROM Students;
+
+-- Comparison operators
+SELECT *
+FROM Students
+WHERE GPA > 3.5;
+
+-- Logical operators
+SELECT *
+FROM Students
+WHERE Age > 20 AND GPA > 3.5;
