@@ -1,0 +1,20 @@
+-- Create table
+CREATE TABLE Students (
+ StudentID INT AUTO_INCREMENT PRIMARY KEY,
+ Name VARCHAR(50),
+ GPA FLOAT(4,2),
+ Age INT);
+ 
+-- Alter table (add a new column)
+ALTER TABLE Students
+ADD COLUMN GPA DECIMAL(3,2);
+
+-- Rename table
+ALTER TABLE Students
+RENAME TO Learners;
+
+-- Drop table
+DROP TABLE Learners;
+
+-- Truncate table
+TRUNCATE TABLE Students;
