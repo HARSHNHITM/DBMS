@@ -1,0 +1,46 @@
+CREATE TABLE Customers (
+  customer_id INT PRIMARY KEY,
+  customer_name VARCHAR(255) NOT NULL,
+  city VARCHAR(255),
+  country VARCHAR(255)
+);
+
+CREATE TABLE Orders (
+  order_id INT PRIMARY KEY,
+  customer_id INT NOT NULL,
+  order_date DATE,
+  order_amount DECIMAL(10,2) NOT NULL,
+  FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+);
+
+CREATE TABLE Products (
+  product_id INT PRIMARY KEY,
+  product_name VARCHAR(255) NOT NULL,
+  price DECIMAL(10,2) NOT NULL,
+  category VARCHAR(255)
+);
+
+inner join
+SELECT c.customer_name, o.order_date, o.order_amount
+FROM Customers c
+INNER JOIN Orders o ON c.customer_id = o.customer_id;
+
+left join
+
+SELECT c.customer_name, o.order_date, o.order_amount
+FROM Customers c
+LEFT JOIN Orders o ON c.customer_id = o.customer_id;
+
+right join
+
+SELECT o.order_date, o.order_amount, p.product_name, c.customer_name
+FROM Orders o
+RIGHT JOIN Customers c ON o.customer_id = c.customer_id
+LEFT JOIN Products p ON o.product_id = p.product_id;  -- Additional join to include product details
+
+
+full join
+
+SELECT c.customer_name, o.order_date, o.order_amount
+FROM Customers c
+FULL JOIN Orders o ON c.customer_id = o.customer_id;

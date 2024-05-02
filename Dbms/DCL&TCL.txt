@@ -1,6 +1,12 @@
 -- DCL command (grant/revoke)
-GRANT SELECT ON Students TO Bob;
+CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'Nhitm-123';
+GRANT SELECT, INSERT ON Students TO 'new_user'@'localhost';
+REVOKE SELECT, INSERT ON Students TO 'new_user'@'localhost';
+DROP USER 'new_user'@'localhost';
 
 -- TCL command (commit/rollback)
 COMMIT;
+START TRANSACTION; 
+update students set gpa = 9.0 where gpa = 7.75; 
+rollback;
 ROLLBACK;
